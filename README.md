@@ -18,7 +18,7 @@ Following steps have been performed to create an Unsupervised Machine Learning m
    Create a dictionary with the data to plot the elbow curve.
    Plot a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
 
-   ** The value of k found by this method is : 4 and corresponding value of inertia is : 79.022435**
+   **The value of k found by this method is : 4 and corresponding value of inertia is : 79.022435**
 
 3. Cluster Cryptocurrencies with K-means Using the Original Scaled Data
    Use the following steps to cluster the cryptocurrencies for the best value for k on the original scaled data:
@@ -32,35 +32,36 @@ Following steps have been performed to create an Unsupervised Machine Learning m
    Color the graph points with the labels found using K-means.
    Add the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
 
-   ** Clusters formed using Original Scaled Data are overlapping and not well-defined **
+   **Clusters formed using Original Scaled Data are overlapping and not well-defined**
 
 4. Optimize Clusters with Principal Component Analysis
    Using the original scaled DataFrame, perform a PCA and reduce the features to three principal components.
 
    Retrieve the explained variance to determine how much information can be attributed to each principal component.
 
-   ** The total explained variance of the three principal components is : 0.8950316570309841 **
+   **The total explained variance of the three principal components is : 0.8950316570309841**
 
    Create a new DataFrame with the PCA data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
 
 5. Find the Best Value for k Using the PCA Data
    Similar to step 2 but using PCA data instead of Original Scaled Data
 
-   ** The value of k found by this method is : 4 (same as found using Original Scaled Data) and corresponding value of inertia is : 49.665497**
+   **The value of k found by this method is : 4 (same as found using Original Scaled Data) and corresponding value of inertia is : 49.665497**
 
 6. Cluster Cryptocurrencies with K-means Using the PCA Data
    Similar to step 3 but using PCA data instead of original scaled data
    Scatter plot with x-axis as "PC1" and the y-axis as "PC2"
 
-   ** Clusters formed using PCA are tighter and well-defined **
+   **Clusters formed using PCA are tighter and well-defined**
 
 Conclusion: The impact of using fewer features to cluster visually shows the following :
 
-     **1. Elbow Curves:** Lower value of inertia using PCA than original features, indicating the sum of squared distances within clusters is smaller. This will result in overall tighter clustering and better performance of the model
+    **1. Elbow Curves:** Lower value of inertia using PCA than original features, indicating the sum of squared distances within clusters is smaller. This will result in overall tighter clustering and better performance of the model
 
-     **2. Cluster Graphs:** The clusters formed using PCA are not overlapping and are well-defined, while the clusters formed using original features have no clear separation. Having reduced the features using PCA has helped decrease the impact of less important features hence creating a model that can derive more meaningful information.
+    **2. Cluster Graphs:** The clusters formed using PCA are not overlapping and are well-defined, while the clusters formed using original features have no clear separation. Having reduced the features using PCA has helped decrease the impact of less important features hence creating a model that can derive more meaningful information.
 
-References:
+**References:**
+
 https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
 https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
 https://medium.com/analytics-vidhya/unsupervised-learning-principal-component-analysis-pca-dc94fecef09b
