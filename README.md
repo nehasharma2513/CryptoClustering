@@ -56,13 +56,14 @@ Following steps have been performed to create an Unsupervised Machine Learning m
 
 Conclusion: The impact of using fewer features to cluster visually shows the following :
 
-    **1. Elbow Curves:** Lower value of inertia using PCA than original features, indicating the sum of squared distances within clusters is smaller. This will result in overall tighter clustering and better performance of the model
-
-    **2. Cluster Graphs:** The clusters formed using PCA are not overlapping and are well-defined, while the clusters formed using original features have no clear separation. Having reduced the features using PCA has helped decrease the impact of less important features hence creating a model that can derive more meaningful information.
+**1. Elbow Curves:**
+Lower value of inertia using PCA than original features, indicating the sum of squared distances within clusters is smaller. This will result in overall tighter clustering and better performance of the model
+**2. Cluster Graphs:**
+The clusters formed using PCA are not overlapping and are well-defined, while the clusters formed using original features have no clear separation. Having reduced the features using PCA has helped decrease the impact of less important features hence creating a model that can derive more meaningful information.
 
 **References:**
 
-https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
-https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
-https://medium.com/analytics-vidhya/unsupervised-learning-principal-component-analysis-pca-dc94fecef09b
-https://www.markdownguide.org/cheat-sheet/
+1. https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+2. https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+3. https://medium.com/analytics-vidhya/unsupervised-learning-principal-component-analysis-pca-dc94fecef09b
+4. https://www.markdownguide.org/cheat-sheet/
